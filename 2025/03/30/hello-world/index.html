@@ -191,27 +191,6 @@
       
 
       
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
-      
     </div>
     <div class="article-info article-info-index">
       
@@ -306,21 +285,22 @@
   
 
   
-  <div id="gitment-ctn"></div> 
-<link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
-<script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
+  <div id="gitment-ctn"></div>
+<link rel="stylesheet" href="https://unpkg.com/gitment@latest/dist/gitment.css">
+<script src="https://unpkg.com/gitment@latest/dist/gitment.browser.js"></script>
 <script>
-var gitment = new Gitment({
-  id: "http://beetlesliu.github.io/2025/03/30/hello-world/",
-  owner: 'Beetlesliu',
-  repo: 'Beetlesliu.github.io',
-  oauth: {
-    client_id: 'Ov23lino159n0GsCwvCw',
-    client_secret: '9192f15527f674b9259ed7ad336eb49a59f8653f',
-  },
-})
-gitment.render('gitment-ctn')
+  var gitment = new Gitment({
+    id: "http://beetlesliu.github.io/2025/03/30/hello-world/",      // 如果模板中该变量不生效，请确认或尝试 
+    owner: 'Beetlesliu',
+    repo: 'Beetlesliu.github.io',
+    oauth: {
+      client_id: 'Ov23lino159n0GsCwvCw',
+      client_secret: '9192f15527f674b9259ed7ad336eb49a59f8653f'
+    }
+  });
+  gitment.render('gitment-ctn');
 </script>
+
   
 
 

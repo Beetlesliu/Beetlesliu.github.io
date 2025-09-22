@@ -28,7 +28,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://beetlesliu.github.io/2025/04/29/d2l-%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/1.png">
 <meta property="article:published_time" content="2025-04-29T08:13:43.000Z">
-<meta property="article:modified_time" content="2025-06-26T12:38:21.306Z">
+<meta property="article:modified_time" content="2025-09-22T12:19:54.608Z">
 <meta property="article:author" content="Beetles">
 <meta property="article:tag" content="CS">
 <meta name="twitter:card" content="summary_large_image">
@@ -468,7 +468,7 @@ mjx-container[display="true"] + br {
 <ol type="1">
 <li><p><strong>计算图</strong>：PyTorch构建动态计算图，记录操作历史，以便反向传播。</p></li>
 <li><p><strong>梯度累积</strong>：每次调用<code>.backward()</code>会累积梯度，除非手动清零：
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs python">optimizer.zero_grad()  <span class="hljs-comment"># 优化器方式</span><br><span class="hljs-comment"># 或</span><br><span class="hljs-keyword">for</span> param <span class="hljs-keyword">in</span> model.parameters():<br>    param.grad = <span class="hljs-literal">None</span>  <span class="hljs-comment"># 更高效的方式</span><br></code></pre></td></tr></table></figure></p></li>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs python">optimizer.zero_grad()  <span class="hljs-comment"># 优化器方式</span><br><span class="hljs-comment"># 或</span><br><span class="hljs-keyword">for</span> param <span class="hljs-keyword">in</span> model.parameters():<br>    param.grad = <span class="hljs-literal">None</span>  <br></code></pre></td></tr></table></figure></p></li>
 <li><p><strong>高阶梯度</strong>：PyTorch支持计算高阶导数：
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python">x = torch.tensor([<span class="hljs-number">1.0</span>], requires_grad=<span class="hljs-literal">True</span>)<br>y = x**<span class="hljs-number">3</span><br>y.backward(create_graph=<span class="hljs-literal">True</span>)  <span class="hljs-comment"># 保留计算图以计算二阶导数</span><br>x.grad.backward()  <span class="hljs-comment"># 计算二阶导数</span><br><span class="hljs-built_in">print</span>(<span class="hljs-string">f'二阶导数: <span class="hljs-subst">{x.grad.grad}</span>'</span>)  <span class="hljs-comment"># 应为6.0</span><br></code></pre></td></tr></table></figure></p></li>
 <li><p><strong>矢量计算加速</strong>：自动求导系统针对矢量运算进行了优化，所以通常应避免使用Python
@@ -549,7 +549,7 @@ for循环。</p></li>
     
       <span class="category-chain">
         
-  <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="category-chain-item">学习笔记</a>
+  <a href="/categories/%E6%9D%82%E9%A3%9F%E7%AC%94%E8%AE%B0/" class="category-chain-item">杂食笔记</a>
   
   
 
@@ -740,7 +740,7 @@ for循环。</p></li>
     <div class="footer-inner">
   
     <div class="footer-content">
-       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> <div style="font-size: 0.85rem"> <span id="website-duration">载入网站运行时间...</span> <script src="/js/duration.js"></script> </div> 
     </div>
   
   

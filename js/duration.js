@@ -5,7 +5,7 @@
   }
 
   // 计时起始时间，仿照格式自行修改
-  var start = Date.parse("2021-07-10T16:03:05");
+  var start = Date.parse("2025-04-14T03:21:58");
 
   function update() {
     var now = Date.now() + 250;

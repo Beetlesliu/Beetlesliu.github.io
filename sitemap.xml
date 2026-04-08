@@ -218,20 +218,6 @@
 
   
   <url>
-    <loc>https://beetlesliu.github.io/tags/ECON/</loc>
-    <lastmod>2026-04-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://beetlesliu.github.io/tags/STATA/</loc>
-    <lastmod>2026-04-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://beetlesliu.github.io/tags/CS/</loc>
     <lastmod>2026-04-08</lastmod>
     <changefreq>weekly</changefreq>
@@ -253,7 +239,14 @@
   </url>
   
   <url>
-    <loc>https://beetlesliu.github.io/tags/ACCT/</loc>
+    <loc>https://beetlesliu.github.io/tags/ECON/</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://beetlesliu.github.io/tags/STATA/</loc>
     <lastmod>2026-04-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -267,13 +260,6 @@
   </url>
   
   <url>
-    <loc>https://beetlesliu.github.io/tags/FINANCE/</loc>
-    <lastmod>2026-04-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://beetlesliu.github.io/tags/MICRO/</loc>
     <lastmod>2026-04-08</lastmod>
     <changefreq>weekly</changefreq>
@@ -281,7 +267,14 @@
   </url>
   
   <url>
-    <loc>https://beetlesliu.github.io/tags/MISC/</loc>
+    <loc>https://beetlesliu.github.io/tags/ACCT/</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://beetlesliu.github.io/tags/FINANCE/</loc>
     <lastmod>2026-04-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -302,7 +295,7 @@
   </url>
   
   <url>
-    <loc>https://beetlesliu.github.io/tags/METRICS/</loc>
+    <loc>https://beetlesliu.github.io/tags/MISC/</loc>
     <lastmod>2026-04-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -315,17 +308,24 @@
     <priority>0.2</priority>
   </url>
   
+  <url>
+    <loc>https://beetlesliu.github.io/tags/METRICS/</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
 
   
   <url>
-    <loc>https://beetlesliu.github.io/categories/%E6%9D%82%E9%A1%B9/</loc>
+    <loc>https://beetlesliu.github.io/categories/%E6%9D%82%E9%A3%9F%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2026-04-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://beetlesliu.github.io/categories/%E6%9D%82%E9%A3%9F%E7%AC%94%E8%AE%B0/</loc>
+    <loc>https://beetlesliu.github.io/categories/%E6%9D%82%E9%A1%B9/</loc>
     <lastmod>2026-04-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -346,14 +346,14 @@
   </url>
   
   <url>
-    <loc>https://beetlesliu.github.io/categories/%E7%AB%99%E7%82%B9/</loc>
+    <loc>https://beetlesliu.github.io/categories/%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2026-04-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://beetlesliu.github.io/categories/%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0/</loc>
+    <loc>https://beetlesliu.github.io/categories/%E7%AB%99%E7%82%B9/</loc>
     <lastmod>2026-04-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

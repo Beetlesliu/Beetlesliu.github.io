@@ -1,0 +1,277 @@
+/* ===========================
+   Beetles' Blog Custom Styles
+   =========================== */
+
+/* --- 全局 --- */
+
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background: rgba(41, 121, 185, 0.2);
+  color: inherit;
+}
+
+[data-user-color-scheme="dark"] ::selection {
+  background: rgba(41, 121, 185, 0.35);
+}
+
+/* --- 阅读进度条 --- */
+
+#reading-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: linear-gradient(90deg, #2980b9, #3498db, #1abc9c);
+  z-index: 9999;
+  transition: width 0.1s linear;
+  pointer-events: none;
+}
+
+/* --- 导航栏 --- */
+
+.navbar {
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar.scrolling-navbar.top-nav-collapse {
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+[data-user-color-scheme="dark"] .navbar.scrolling-navbar.top-nav-collapse {
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* --- 内容面板 --- */
+
+#board {
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+}
+
+[data-user-color-scheme="dark"] #board {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* --- 首页文章卡片 --- */
+
+.index-card {
+  border-radius: 12px !important;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.index-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.12);
+}
+
+[data-user-color-scheme="dark"] .index-card {
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+}
+
+[data-user-color-scheme="dark"] .index-card:hover {
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.3);
+}
+
+/* 卡片间距 */
+.index-card + .index-card {
+  margin-top: 1.5rem;
+}
+
+/* --- 文章正文排版 --- */
+
+.post-content {
+  line-height: 1.85;
+  letter-spacing: 0.01em;
+}
+
+.post-content h1,
+.post-content h2,
+.post-content h3,
+.post-content h4 {
+  margin-top: 2em;
+  margin-bottom: 0.8em;
+}
+
+.post-content h2 {
+  padding-bottom: 0.4em;
+  border-bottom: 1px solid #eaecef;
+}
+
+[data-user-color-scheme="dark"] .post-content h2 {
+  border-bottom-color: #435266;
+}
+
+.post-content p {
+  margin-bottom: 1.2em;
+}
+
+/* --- 代码块 --- */
+
+figure.highlight,
+.post-content pre {
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  margin: 1.2em 0;
+}
+
+[data-user-color-scheme="dark"] figure.highlight,
+[data-user-color-scheme="dark"] .post-content pre {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.post-content code,
+figure.highlight code,
+figure.highlight pre {
+  font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', 'Consolas', monospace;
+}
+
+/* 行内代码 */
+.post-content :not(pre) > code {
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+  background: #f3f4f6;
+  font-size: 0.88em;
+}
+
+[data-user-color-scheme="dark"] .post-content :not(pre) > code {
+  background: #2d3748;
+}
+
+/* --- 表格 --- */
+
+.post-content table {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  margin: 1.5em 0;
+}
+
+.post-content thead th {
+  background: #f7f8fa;
+  font-weight: 600;
+}
+
+[data-user-color-scheme="dark"] .post-content thead th {
+  background: #2d3748;
+}
+
+.post-content tbody tr:hover {
+  background: rgba(41, 128, 185, 0.04);
+}
+
+[data-user-color-scheme="dark"] .post-content tbody tr:hover {
+  background: rgba(41, 128, 185, 0.08);
+}
+
+/* --- 引用块 --- */
+
+.post-content blockquote {
+  border-left: 4px solid #3498db;
+  background: rgba(52, 152, 219, 0.04);
+  padding: 0.8em 1.2em;
+  border-radius: 0 8px 8px 0;
+  margin: 1.2em 0;
+}
+
+[data-user-color-scheme="dark"] .post-content blockquote {
+  background: rgba(52, 152, 219, 0.08);
+  border-left-color: #2980b9;
+}
+
+/* --- MathJax 溢出处理 --- */
+
+mjx-container[display="true"] {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0.5em 0;
+}
+
+.MathJax_Display {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+/* --- 图片 --- */
+
+.post-content img {
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.3s ease;
+}
+
+.post-content img:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+[data-user-color-scheme="dark"] .post-content img {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* --- TOC 目录 --- */
+
+.tocbot-list a {
+  transition: color 0.2s ease, border-left-color 0.2s ease;
+}
+
+.tocbot-active-link {
+  font-weight: 600 !important;
+}
+
+/* --- 分页按钮 --- */
+
+.pagination a,
+.pagination span {
+  border-radius: 6px !important;
+  transition: all 0.2s ease;
+}
+
+/* --- 标签云 --- */
+
+.tagcloud a {
+  transition: all 0.2s ease;
+  border-radius: 4px;
+  padding: 2px 6px;
+}
+
+.tagcloud a:hover {
+  transform: scale(1.05);
+}
+
+/* --- Footer --- */
+
+footer.content-wrapper {
+  border-top: 1px solid #eaecef;
+}
+
+[data-user-color-scheme="dark"] footer.content-wrapper {
+  border-top-color: #435266;
+}
+
+/* --- 响应式调整 --- */
+
+@media (max-width: 767px) {
+  #board {
+    border-radius: 8px;
+  }
+
+  .index-card {
+    border-radius: 8px !important;
+  }
+
+  .post-content {
+    line-height: 1.75;
+  }
+
+  .post-content h1,
+  .post-content h2,
+  .post-content h3 {
+    margin-top: 1.5em;
+  }
+}

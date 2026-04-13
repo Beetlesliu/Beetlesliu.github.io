@@ -376,7 +376,7 @@ mjx-container[display="true"] + br {
         
         
         
-          24 分钟
+          25 分钟
         
       </span>
     
@@ -497,7 +497,15 @@ mjx-container[display="true"] + br {
             
               <div class="markdown-body">
                 
-                <h1 id="数据处理">数据处理</h1>
+                
+<nav class="post-breadcrumb" aria-label="breadcrumb">
+  <ol>
+    <li><a href="/"><i class="iconfont icon-home"></i> 首页</a></li>
+    <li><a href="/categories/杂食笔记/">杂食笔记</a></li>
+    <li class="active" aria-current="page">d2l 学习记录</li>
+  </ol>
+</nav>
+<h1 id="数据处理">数据处理</h1>
 <h2 id="n维数组">N维数组</h2>
 <ul>
 <li><p>0-d 标量 一个类别</p></li>
@@ -625,6 +633,24 @@ for循环。</p></li>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np<br><span class="hljs-keyword">import</span> torch<br><span class="hljs-keyword">from</span> torch.utils <span class="hljs-keyword">import</span> data<br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">synthetic_data</span>(<span class="hljs-params">w,b,num_examples</span>):<br>    <span class="hljs-string">"""生成 y = Xw + b + 噪声"""</span><br>    X = torch.normal(<span class="hljs-number">0</span>,<span class="hljs-number">1</span>,(num_examples, <span class="hljs-built_in">len</span>(w)))<br>    y = torch.matmul(X,w) + b<br>    y += torch.normal(<span class="hljs-number">0</span>,<span class="hljs-number">0.01</span>,y.shape)<br>    <span class="hljs-keyword">return</span> X,y.reshape((-<span class="hljs-number">1</span>,<span class="hljs-number">1</span>))<br><br>true_w = torch.tensor([<span class="hljs-number">2</span>,-<span class="hljs-number">3.4</span>])<br>true_b = <span class="hljs-number">4.2</span><br>features, labels = synthetic_data(true_w, true_b, <span class="hljs-number">2000</span>)<br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">load_array</span>(<span class="hljs-params">data_arrays, batch_size, is_train=<span class="hljs-literal">True</span></span>): <span class="hljs-comment">#@save</span><br>    dataset = data.TensorDataset(*data_arrays)<br>    <span class="hljs-keyword">return</span> data.DataLoader(dataset, batch_size, shuffle=is_train)<br><br>batch_size = <span class="hljs-number">10</span><br>data_iter = load_array((features, labels), batch_size)<br><br><span class="hljs-built_in">next</span>(<span class="hljs-built_in">iter</span>(data_iter))<br><br><br><span class="hljs-keyword">from</span> torch <span class="hljs-keyword">import</span> nn<br>net = nn.Sequential(nn.Linear(<span class="hljs-number">2</span>, <span class="hljs-number">1</span>))<br><br>net[<span class="hljs-number">0</span>].weight.data.normal_(<span class="hljs-number">0</span>, <span class="hljs-number">0.01</span>)<br>net[<span class="hljs-number">0</span>].bias.data.fill_(<span class="hljs-number">0</span>)<br><br>loss = nn.MSELoss()<br>trainer = torch.optim.SGD(net.parameters(), lr=<span class="hljs-number">0.03</span>)<br><br>num_epochs = <span class="hljs-number">6</span><br><span class="hljs-keyword">for</span> epoch <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(num_epochs):<br>    <span class="hljs-keyword">for</span> X, y <span class="hljs-keyword">in</span> data_iter:<br>        l = loss(net(X) ,y)<br>        trainer.zero_grad()<br>        l.backward()<br>        trainer.step()<br>    l = loss(net(features), labels)<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">f'epoch <span class="hljs-subst">{epoch + <span class="hljs-number">1</span>}</span>, loss <span class="hljs-subst">{l:f}</span>'</span>)<br>    w = net[<span class="hljs-number">0</span>].weight.data<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">'w的估计误差：'</span>, true_w - w.reshape(true_w.shape))<br>    b = net[<span class="hljs-number">0</span>].bias.data<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">'b的估计误差：'</span>, true_b - b)   <br></code></pre></td></tr></table></figure>
 <h2 id="softmax回归">softmax回归</h2>
 <p>softmax回归其实是分类问题。回归估计一个连续值，分类预测一个离散类别</p>
+
+<section class="related-posts">
+  <h3 class="related-posts-title"><i class="iconfont icon-bookmark"></i> 相关文章</h3>
+  <ul class="related-posts-list">
+<li class="related-item">
+      <a href="/2025/04/29/STM32学习记录/">
+        <span class="related-title">STM32学习记录</span>
+        <span class="related-date">2025-04-29</span>
+      </a>
+    </li>
+<li class="related-item">
+      <a href="/2025/04/14/电子工程训练/">
+        <span class="related-title">电子工程训练</span>
+        <span class="related-date">2025-04-13</span>
+      </a>
+    </li>
+  </ul>
+</section>
 
                 
               </div>

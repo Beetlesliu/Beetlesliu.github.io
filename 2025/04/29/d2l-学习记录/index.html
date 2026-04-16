@@ -30,7 +30,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://beetlesliu.github.io/2025/04/29/d2l-%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/1.png">
 <meta property="article:published_time" content="2025-04-29T08:13:43.000Z">
-<meta property="article:modified_time" content="2026-04-08T11:14:54.312Z">
+<meta property="article:modified_time" content="2026-04-15T05:54:25.933Z">
 <meta property="article:author" content="Beetles">
 <meta property="article:tag" content="CS">
 <meta property="article:tag" content="DL">
@@ -376,7 +376,7 @@ mjx-container[display="true"] + br {
         
         
         
-          25 分钟
+          24 分钟
         
       </span>
     
@@ -497,15 +497,11 @@ mjx-container[display="true"] + br {
             
               <div class="markdown-body">
                 
-                
+                <!--post-enhance:top:start-->
 <nav class="post-breadcrumb" aria-label="breadcrumb">
-  <ol>
-    <li><a href="/"><i class="iconfont icon-home"></i> 首页</a></li>
-    <li><a href="/categories/杂食笔记/">杂食笔记</a></li>
-    <li class="active" aria-current="page">d2l 学习记录</li>
-  </ol>
+  <a class="crumb-link" href="/">首页</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-link" href="/categories/杂食笔记/">杂食笔记</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-current" aria-current="page">d2l 学习记录</span>
 </nav>
-<h1 id="数据处理">数据处理</h1>
+<!--post-enhance:top:end--><h1 id="数据处理">数据处理</h1>
 <h2 id="n维数组">N维数组</h2>
 <ul>
 <li><p>0-d 标量 一个类别</p></li>
@@ -525,7 +521,7 @@ mjx-container[display="true"] + br {
 </ul>
 <h2 id="访问元素">访问元素</h2>
 <p><code>x[row,column]</code> 规则与列表切片相同</p>
-<img src="/2025/04/29/d2l-%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/1.png" srcset="/img/loading.gif" lazyload class="">
+<p><img src="1.png" srcset="/img/loading.gif" lazyload></p>
 <h2 id="数据操作">数据操作</h2>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> torch<br><br><span class="hljs-comment"># 生成数组</span><br>torch.arange(start=<span class="hljs-number">0</span>, end, step=<span class="hljs-number">1</span>, *, out=<span class="hljs-literal">None</span>, dtype=<span class="hljs-literal">None</span>, layout=torch.strided, device=<span class="hljs-literal">None</span>, requires_grad=<span class="hljs-literal">False</span>)<br><span class="hljs-comment"># 示例：</span><br>torch.arange(<span class="hljs-number">12</span>)  <span class="hljs-comment"># tensor([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11])</span><br>torch.arange(<span class="hljs-number">1</span>, <span class="hljs-number">10</span>, <span class="hljs-number">2</span>)  <span class="hljs-comment"># tensor([1, 3, 5, 7, 9])</span><br><br><span class="hljs-comment"># 张量属性和方法</span><br>x = torch.arange(<span class="hljs-number">12</span>)<br>x.shape  <span class="hljs-comment"># 返回张量的形状 torch.Size([12])</span><br>x.numel()  <span class="hljs-comment"># 返回张量元素的个数 12 (注意需要加括号)</span><br>x.reshape(<span class="hljs-number">3</span>, <span class="hljs-number">4</span>)  <span class="hljs-comment"># 修改张量的形状为3×4矩阵</span><br>x.reshape(-<span class="hljs-number">1</span>, <span class="hljs-number">4</span>)  <span class="hljs-comment"># -1表示自动计算该维度大小</span><br><br><span class="hljs-comment"># 使用全0、全1或随机采样的数字</span><br>torch.zeros((<span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>))  <span class="hljs-comment"># 创建2×3×4的全零张量</span><br>torch.ones((<span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>))   <span class="hljs-comment"># 创建2×3×4的全一张量</span><br>torch.randn((<span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>))  <span class="hljs-comment"># 创建2×3×4的随机张量(标准正态分布)</span><br>torch.rand((<span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>))   <span class="hljs-comment"># 创建2×3×4的随机张量(0-1均匀分布)</span><br><br><span class="hljs-comment"># 创建特定张量</span><br>torch.tensor([[<span class="hljs-number">2</span>, <span class="hljs-number">1</span>, <span class="hljs-number">3</span>], [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>], [<span class="hljs-number">3</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>]])  <span class="hljs-comment"># 从列表创建张量</span><br>torch.eye(<span class="hljs-number">3</span>)  <span class="hljs-comment"># 创建3×3单位矩阵</span><br>torch.full((<span class="hljs-number">2</span>, <span class="hljs-number">3</span>), <span class="hljs-number">7</span>)  <span class="hljs-comment"># 创建2×3的张量,所有元素为7</span><br><br><span class="hljs-comment"># 按元素运算</span><br>x = torch.tensor([<span class="hljs-number">1.0</span>, <span class="hljs-number">2</span>, <span class="hljs-number">4</span>, <span class="hljs-number">8</span>])<br>y = torch.tensor([<span class="hljs-number">2</span>, <span class="hljs-number">2</span>, <span class="hljs-number">2</span>, <span class="hljs-number">2</span>])<br>x + y  <span class="hljs-comment"># 加法 tensor([3., 4., 6., 10.])</span><br>x - y  <span class="hljs-comment"># 减法 tensor([-1., 0., 2., 6.])</span><br>x * y  <span class="hljs-comment"># 乘法 tensor([2., 4., 8., 16.])</span><br>x / y  <span class="hljs-comment"># 除法 tensor([0.5, 1., 2., 4.])</span><br>x ** y  <span class="hljs-comment"># 幂运算 tensor([1., 4., 16., 64.])</span><br><br><span class="hljs-comment"># 数学函数</span><br>torch.exp(x)  <span class="hljs-comment"># 指数函数</span><br>torch.log(x)  <span class="hljs-comment"># 对数函数</span><br>torch.sqrt(x)  <span class="hljs-comment"># 平方根</span><br>torch.sin(x)  <span class="hljs-comment"># 正弦函数</span><br><br><span class="hljs-comment"># 连结张量</span><br>X = torch.arange(<span class="hljs-number">12</span>, dtype=torch.float32).reshape((<span class="hljs-number">3</span>, <span class="hljs-number">4</span>))<br>Y = torch.tensor([[<span class="hljs-number">2.0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">4</span>, <span class="hljs-number">3</span>], [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>], [<span class="hljs-number">4</span>, <span class="hljs-number">3</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>]])<br>torch.cat((X, Y), dim=<span class="hljs-number">0</span>)  <span class="hljs-comment"># 沿行连接(垂直连接)</span><br>torch.cat((X, Y), dim=<span class="hljs-number">1</span>)  <span class="hljs-comment"># 沿列连接(水平连接)</span><br><br><span class="hljs-comment"># 逻辑运算</span><br>X == Y  <span class="hljs-comment"># 逐元素比较,返回布尔张量</span><br>X &lt; Y   <span class="hljs-comment"># 小于比较</span><br>X &gt; Y   <span class="hljs-comment"># 大于比较</span><br><br><span class="hljs-comment"># 求和</span><br>X.<span class="hljs-built_in">sum</span>()  <span class="hljs-comment"># 所有元素求和</span><br>X.<span class="hljs-built_in">sum</span>(axis=<span class="hljs-number">0</span>)  <span class="hljs-comment"># 沿行求和(每列的和)</span><br>X.<span class="hljs-built_in">sum</span>(axis=<span class="hljs-number">1</span>)  <span class="hljs-comment"># 沿列求和(每行的和)</span><br>X.<span class="hljs-built_in">sum</span>(axis=[<span class="hljs-number">0</span>, <span class="hljs-number">1</span>])  <span class="hljs-comment"># 沿多个轴求和</span><br><br><span class="hljs-comment"># 广播机制</span><br>a = torch.arange(<span class="hljs-number">3</span>).reshape((<span class="hljs-number">3</span>, <span class="hljs-number">1</span>))<br>b = torch.arange(<span class="hljs-number">2</span>).reshape((<span class="hljs-number">1</span>, <span class="hljs-number">2</span>))<br>a + b  <span class="hljs-comment"># 自动广播进行运算</span><br><br><span class="hljs-comment"># 节省内存的运算</span><br>Y = X + Y  <span class="hljs-comment"># 会分配新内存</span><br>Y[:] = X + Y  <span class="hljs-comment"># 或 Y += X，原地操作，节省内存</span><br><br><span class="hljs-comment"># 转换为其他Python对象</span><br>A = X.numpy()  <span class="hljs-comment"># 转换为NumPy数组</span><br>B = torch.tensor(A)  <span class="hljs-comment"># 从NumPy数组创建张量</span><br>a = torch.tensor([<span class="hljs-number">3.5</span>])<br>a.item()  <span class="hljs-comment"># 将大小为1的张量转换为Python标量</span><br></code></pre></td></tr></table></figure>
 <h2 id="数据预处理">数据预处理</h2>
@@ -634,24 +630,6 @@ for循环。</p></li>
 <h2 id="softmax回归">softmax回归</h2>
 <p>softmax回归其实是分类问题。回归估计一个连续值，分类预测一个离散类别</p>
 
-<section class="related-posts">
-  <h3 class="related-posts-title"><i class="iconfont icon-bookmark"></i> 相关文章</h3>
-  <ul class="related-posts-list">
-<li class="related-item">
-      <a href="/2025/04/29/STM32学习记录/">
-        <span class="related-title">STM32学习记录</span>
-        <span class="related-date">2025-04-29</span>
-      </a>
-    </li>
-<li class="related-item">
-      <a href="/2025/04/14/电子工程训练/">
-        <span class="related-title">电子工程训练</span>
-        <span class="related-date">2025-04-13</span>
-      </a>
-    </li>
-  </ul>
-</section>
-
                 
               </div>
             
@@ -717,7 +695,7 @@ for循环。</p></li>
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2026年4月8日</div>
+          <div>2026年4月15日</div>
         </div>
       
       

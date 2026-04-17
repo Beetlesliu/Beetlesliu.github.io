@@ -873,26 +873,26 @@ i.iconfont {
     --color-mode: "dark";
   }
   :root:not([data-user-color-scheme]) {
-    --body-bg-color: #17140F;
-    --board-bg-color: #1F1B15;
-    --text-color: #E8DFD2;
-    --sec-text-color: #9B8F7E;
-    --post-text-color: #E8DFD2;
-    --post-heading-color: #E8DFD2;
-    --post-link-color: #E3A47C;
-    --link-hover-color: #F0B48C;
+    --body-bg-color: #181818;
+    --board-bg-color: #212121;
+    --text-color: #E5E5E5;
+    --sec-text-color: #888888;
+    --post-text-color: #E5E5E5;
+    --post-heading-color: #E5E5E5;
+    --post-link-color: #E07A8F;
+    --link-hover-color: #EFA0B0;
     --link-hover-bg-color: #364151;
     --line-color: #435266;
-    --navbar-bg-color: #1A1612;
-    --navbar-text-color: #E8DFD2;
-    --subtitle-color: #E8DFD2;
+    --navbar-bg-color: #252525;
+    --navbar-text-color: #E5E5E5;
+    --subtitle-color: #E5E5E5;
     --scrollbar-color: #687582;
     --scrollbar-hover-color: #9da8b3;
     --button-bg-color: transparent;
     --button-hover-bg-color: #46647e;
     --highlight-bg-color: #303030;
     --inlinecode-bg-color: rgba(99,110,123,0.4);
-    --fold-title-color: #E8DFD2;
+    --fold-title-color: #E5E5E5;
     --fold-border-color: #435266;
   }
   :root:not([data-user-color-scheme]) img {
@@ -904,7 +904,7 @@ i.iconfont {
     :root:not([data-user-color-scheme]) .navbar .dropdown-collapse,
     :root:not([data-user-color-scheme]) .top-nav-collapse,
     :root:not([data-user-color-scheme]) .navbar-col-show {
-      background: rgba(26,22,18,0.7);
+      background: rgba(37,37,37,0.7);
       -webkit-backdrop-filter: blur(3px);
       backdrop-filter: blur(3px);
     }
@@ -913,7 +913,7 @@ i.iconfont {
     :root:not([data-user-color-scheme]) .navbar .dropdown-collapse,
     :root:not([data-user-color-scheme]) .top-nav-collapse,
     :root:not([data-user-color-scheme]) .navbar-col-show {
-      background: #1a1612;
+      background: #252525;
     }
   }
   :root:not([data-user-color-scheme]) .license-box {
@@ -927,26 +927,26 @@ i.iconfont {
 }
 @media not print {
   [data-user-color-scheme="dark"] {
-    --body-bg-color: #17140F;
-    --board-bg-color: #1F1B15;
-    --text-color: #E8DFD2;
-    --sec-text-color: #9B8F7E;
-    --post-text-color: #E8DFD2;
-    --post-heading-color: #E8DFD2;
-    --post-link-color: #E3A47C;
-    --link-hover-color: #F0B48C;
+    --body-bg-color: #181818;
+    --board-bg-color: #212121;
+    --text-color: #E5E5E5;
+    --sec-text-color: #888888;
+    --post-text-color: #E5E5E5;
+    --post-heading-color: #E5E5E5;
+    --post-link-color: #E07A8F;
+    --link-hover-color: #EFA0B0;
     --link-hover-bg-color: #364151;
     --line-color: #435266;
-    --navbar-bg-color: #1A1612;
-    --navbar-text-color: #E8DFD2;
-    --subtitle-color: #E8DFD2;
+    --navbar-bg-color: #252525;
+    --navbar-text-color: #E5E5E5;
+    --subtitle-color: #E5E5E5;
     --scrollbar-color: #687582;
     --scrollbar-hover-color: #9da8b3;
     --button-bg-color: transparent;
     --button-hover-bg-color: #46647e;
     --highlight-bg-color: #303030;
     --inlinecode-bg-color: rgba(99,110,123,0.4);
-    --fold-title-color: #E8DFD2;
+    --fold-title-color: #E5E5E5;
     --fold-border-color: #435266;
   }
   [data-user-color-scheme="dark"] img {
@@ -958,7 +958,7 @@ i.iconfont {
     [data-user-color-scheme="dark"] .navbar .dropdown-collapse,
     [data-user-color-scheme="dark"] .top-nav-collapse,
     [data-user-color-scheme="dark"] .navbar-col-show {
-      background: rgba(26,22,18,0.7);
+      background: rgba(37,37,37,0.7);
       -webkit-backdrop-filter: blur(3px);
       backdrop-filter: blur(3px);
     }
@@ -967,7 +967,7 @@ i.iconfont {
     [data-user-color-scheme="dark"] .navbar .dropdown-collapse,
     [data-user-color-scheme="dark"] .top-nav-collapse,
     [data-user-color-scheme="dark"] .navbar-col-show {
-      background: #1a1612;
+      background: #252525;
     }
   }
   [data-user-color-scheme="dark"] .license-box {
